@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellmeadows Hospital</title>
-    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
 
     <div class="wrapper">
@@ -16,44 +15,35 @@
             <h1>Staff Qualifications</h1>
             <section class="create-requisition-section">
                 <div class="accordion">
-                    <!-- Add Staff Qualifications -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">Add a Qualification</button>
+                    <details class="accordion-item open">
+                        <summary class="accordion-header">Add a Qualification</summary>
                         <div class="accordion-content"> <br>
                             <h4>Qualification Information</h4> <br>
                             <div class="content-container">
                                 <div class="column">
                                     <div class="row">
-                                        <label for="staff">Staff Number</label>
-                                        <input type="text" name="institute-name" id="staff-number" style="width: 55%;">
-                                        <!-- <label for="staff">Staff Number</label>
-                                        <select style="margin-right: 78px;" na  me="staff-number" id="staff-number">
-                                        </select> -->
+                                        <label for="staffID">Staff Number</label>
+                                        <input type="text" name="staffID" id="staff-number" style="width: 55%;">
                                     </div>
                                 </div>
                             </div>
                             <div class="content-container">
-                                <!-- Qualification Type, Date of Qualification, Institute Name -->
                                 <div class="column">
-                                    <!-- Qualification Type -->
                                     <div class="row">
-                                        <label for="qualification-type">Type/Program</label>
-                                        <input type="text" name="qualification-type" id="qualification-type" style="width: 55%;">
+                                        <label for="qualificationType">Type/Program</label>
+                                        <input type="text" name="qualificationType" id="qualification-type" style="width: 55%;">
                                     </div>
                                 </div>
                                 <div class="column">
-                                    <!-- Date of Qualification -->
                                     <div class="row">
-                                        <label for="date-for-qualification">Qualification Date</label>
-                                        <input type="date" name="date-of-qualification" id="date-of-qualification" style="width: 55%;">
+                                        <label for="qualificationDate">Qualification Date</label>
+                                        <input type="date" name="qualificationDate" id="date-of-qualification" style="width: 55%;">
                                     </div>
-
                                 </div>
                                 <div class="column">
-                                    <!-- Institute Name -->
                                     <div class="row">
-                                        <label for="institute-name">Institute Name</label>
-                                        <input type="text" name="institute-name" id="institute-name" style="width: 55%;">
+                                        <label for="instituteName">Institute Name</label>
+                                        <input type="text" name="instituteName" id="institute-name" style="width: 55%;">
                                     </div>
                                 </div>
                             </div> <br> <br>
@@ -61,12 +51,10 @@
                                 <button type="button" id="add-qualification-btn">Add</button>
                             </div> <br>
                         </div>
-                    </div>
-                    <!-- Manage Staff Qualifications-->
-                    <div class="accordion-item">
-                        <button class="accordion-header">Manage Staff Qualifications</button>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">Manage Staff Qualifications</summary>
                         <div class="accordion-content" id="accordion-content-edit" style="padding: 0px 10px;"> <br>
-                            <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">
                                     <input type="text" placeholder="Search..." class="search-input" />
@@ -75,11 +63,11 @@
                                 <div class="sort-container">
                                     <select name="sort" id="sort-select" class="sort-select">
                                         <option value="" disabled selected>Sort</option>
-                                        <option value="ID">ID</option>
-                                        <option value="Staff Number">Staff Number</option>
-                                        <option value="staff-type">Type/Program</option>
-                                        <option value="qualification-date">Qualification Date</option>
-                                        <option value="institute-name">Institute Name</option>
+                                        <option value="qualificationID">Qualification ID</option>
+                                        <option value="staffID">Staff Number</option>
+                                        <option value="qualificationType">Type/Program</option>
+                                        <option value="qualificationDate">Qualification Date</option>
+                                        <option value="instituteName">Institute Name</option>
                                     </select>
                                 </div>
                             </div>
@@ -95,147 +83,94 @@
                                                 <th>Institute Name</th>
                                             </tr>
                                         </thead>
-
                                         <tbody>
                                             <tr>
-                                                <!-- Qualification ID -->
                                                 <td>000324</td>
-
-                                                <!-- Staff Number -->
                                                 <td>0001</td>
-
-                                                <!-- Type/Program -->
                                                 <td>BS Information Technology</td>
-
-                                                <!-- Qualification Date -->
                                                 <td>2024-12-10</td>
-
-                                                <!-- Institute Name -->
                                                 <td>Western Mindanao State University</td>
                                             </tr>
                                             <tr>
-                                                <!-- Qualification ID -->
                                                 <td>000324</td>
-
-                                                <!-- Staff Number -->
                                                 <td>0001</td>
-
-                                                <!-- Type/Program -->
                                                 <td>BS Information Technology</td>
-
-                                                <!-- Qualification Date -->
                                                 <td>2024-12-10</td>
-
-                                                <!-- Institute Name -->
                                                 <td>Western Mindanao State University</td>
                                             </tr>
                                             <tr>
-                                                <!-- Qualification ID -->
                                                 <td>000324</td>
-
-                                                <!-- Staff Number -->
                                                 <td>0001</td>
-
-                                                <!-- Type/Program -->
                                                 <td>BS Information Technology</td>
-
-                                                <!-- Qualification Date -->
                                                 <td>2024-12-10</td>
-
-                                                <!-- Institute Name -->
                                                 <td>Western Mindanao State University</td>
                                             </tr>
                                             <tr>
-                                                <!-- Qualification ID -->
                                                 <td>000324</td>
-
-                                                <!-- Staff Number -->
                                                 <td>0001</td>
-
-                                                <!-- Type/Program -->
                                                 <td>BS Information Technology</td>
-
-                                                <!-- Qualification Date -->
                                                 <td>2024-12-10</td>
-
-                                                <!-- Institute Name -->
                                                 <td>Western Mindanao State University</td>
                                             </tr>
                                             <tr>
-                                                <!-- Qualification ID -->
                                                 <td>000324</td>
-
-                                                <!-- Staff Number -->
                                                 <td>0001</td>
-
-                                                <!-- Type/Program -->
                                                 <td>BS Information Technology</td>
-
-                                                <!-- Qualification Date -->
                                                 <td>2024-12-10</td>
-
-                                                <!-- Institute Name -->
                                                 <td>Western Mindanao State University</td>
                                             </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
 
-                            <!-- View and Update Container -->
                             <div class="container2">
-                                <!-- Close Button -->
                                 <button class="close-btn" id="close-btn">x</button>
 
                                 <h4 class="container2-title">Staff Qualification</h4> <br>
-                                <!-- Qualification Number -->
                                 <div class="content-container">
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
-                                            <label for="qualification-num">Qualification Number</label>
-                                            <input type="number" name="qualification-number" id="qualification-number" readonly style="margin-right: 20px;">
+                                            <label for="qualificationID">Qualification Number</label>
+                                            <input type="number" name="qualificationID" id="qualification-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Staff Number -->
                                 <div class="content-container">
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
-                                            <label for="staff-num">Staff Number</label>
-                                            <input type="number" name="staff-number" id="staff-number" readonly style="margin-right: 20px;">
+                                            <label for="staffID">Staff Number</label>
+                                            <input type="number" name="staffID" id="staff-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
 
                                 <h3 style="color: #0c8882;">Qualification Information</h3> <br>
-                                <!-- Type/Program, Qualification Date and Institute Name -->
                                 <div class="content-container">
-                                    <!-- Type/Program -->
                                     <div class="column" style="width: 100%;">
                                         <div class="row">
-                                            <label for="type/program">Type/Program</label>
+                                            <label for="qualificationType">Type/Program</label>
                                         </div>
                                         <div class="row">
-                                            <input type="text" name="name/program" id="type/program" readonly>
+                                            <input type="text" name="qualificationType" id="type/program">
                                         </div>
                                     </div>
-                                    <!-- Qualification Date -->
                                     <div class="column">
                                         <div class="row">
-                                            <label for="qualification-date">Qualification Date</label>
+                                            <label for="qualificationDate">Qualification Date</label>
                                         </div>
                                         <div class="row">
-                                            <input type="date" name="qualification-date" id="qualification-date" readonly>
+                                            <input type="date" name="qualificationDate" id="qualification-date">
                                         </div>
                                     </div>
 
-                                    <!-- Institute Name -->
                                     <div class="column">
                                         <div class="row">
-                                            <label for="institute-name">Institute Name</label>
+                                            <label for="instituteName">Institute Name</label>
                                         </div>
                                         <div class="row">
-                                            <input type="text" name="institute-name" id="institute-name" readonly>
+                                            <input type="text" name="instituteName" id="institute-name">
                                         </div>
                                     </div>
                                 </div>
@@ -244,15 +179,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </details>
                 </div>
             </section>
         </div>
     </div>
-    <!-- JS Script -->
-    <!-- <script src="../js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../js/ajax-qualifs.js"></script> -->
 </body>
 
 </html>

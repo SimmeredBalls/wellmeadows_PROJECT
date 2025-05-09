@@ -4,161 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellmeadows Hospital</title>
-    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
 
     <div class="wrapper">
         <div class="container">
-            <h1>Wards</h1>
+            <h1>Waiting List and In-Patients</h1>
             <section class="wards-section">
                 <div class="accordion">
-                    <!-- Waiting List -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">Waiting List</button>
+                    <details class="accordion-item open">
+                        <summary class="accordion-header">Waiting List</summary>
                         <div class="accordion-content" style="padding: 0px 10px;"> <br>
                             <h4>Current Waiting List</h4> <br>
                             <div class="content-container">
                                 <div class="table-container">
                                     <table class="waiting-list-table">
-                                        <tr>
-                                            <th>Patient Num</th>
-                                            <th>Patient</th>
-                                            <th>On Waiting List</th>
-                                            <th>Ward</th>
-                                            <th>Expected Stay (days)</th>
-                                            <th>Planned Exit Date</th>
-                                            <th>Exit Date</th>
-                                            <th>Bed</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tbody>
-                                            <!-- Add rows here as needed -->
-
+                                        <thead>
                                             <tr>
-                                                <!-- Patient Number -->
+                                                <th>Patient Number</th>
+                                                <th>Patient Name</th>
+                                                <th>Date Added</th>
+                                                <th>Ward Preference</th>
+                                                <th>Expected Stay (Days)</th>
+                                                <th>Planned Admission Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
                                                 <td>0001</td>
-
-                                                <!-- Patient Name -->
                                                 <td>Aldrin Said</td>
-
-                                                <!-- On Waiting List -->
-                                                <td>12/10/2002</td>
-
-                                                <!-- Ward -->
-                                                <td><select name="ward" id="ward">
-                                                        <option value="">Ward List</option>
+                                                <td>2002-12-10</td>
+                                                <td>
+                                                    <select name="wardPreference" id="ward-preference-0001">
+                                                        <option value="">Select Ward</option>
                                                     </select>
                                                 </td>
-
-                                                <!-- Expected  Stay (Days) -->
                                                 <td>143</td>
-
-                                                <!-- Planned Exit Date -->
-                                                <td>12/10/2002</td>
-
-                                                <!-- Exit Date -->
-                                                <td><input type="date" name="exit-date" id="exit-date"></td>
-
-                                                <!-- Bed -->
-                                                <td><select name="bed" id="bed">
-                                                        <option value="">Choose Bed</option>
-                                                        <option value="Bed ni Aldrin">Bed ni Aldrin</option>
-                                                    </select>
+                                                <td>2002-12-10</td>
+                                                <td>
+                                                    <button type="button" class="update-waitlist-btn" data-patient-id="0001">Update</button>
+                                                    <button type="button" class="delete-waitlist-btn" data-patient-id="0001">Delete</button>
                                                 </td>
-
-                                                <!-- Update -->
-                                                <td><a href="#">Update</a></td>
-
-                                                <!-- Delete -->
-                                                <td><a href="#">Delete</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
-                    <!-- Current In-Patients -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">Current In-Patients</button>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">Current In-Patients</summary>
                         <div class="accordion-content" style="padding: 0px 10px;"> <br>
-                            <h4>In Patients</h4> <br>
+                            <h4>Current In-Patients</h4> <br>
                             <div class="content-container">
                                 <div class="table-container">
-                                    <table class="waiting-list-table">
-                                        <tr>
-                                            <th>Patient Num</th>
-                                            <th>Patient</th>
-                                            <th>Date Admitted</th>
-                                            <th>Ward</th>
-                                            <th>Expected Stay (days)</th>
-                                            <th>Planned Exit Date</th>
-                                            <th>Exit Date</th>
-                                            <th>Bed</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tbody>
-                                            <!-- Add rows here as needed -->
-
+                                    <table class="in-patients-table">
+                                        <thead>
                                             <tr>
-                                                <!-- Patient Number -->
-                                                <td>0001</td>
-
-                                                <!-- Patient Name -->
-                                                <td>Aldrin Said</td>
-
-                                                <!-- Date Admitted -->
-                                                <td>12/10/2002</td>
-
-                                                <!-- Ward -->
-                                                <td><select name="ward" id="ward">
-                                                        <option value="">Ward List</option>
+                                                <th>Patient Number</th>
+                                                <th>Patient Name</th>
+                                                <th>Date Admitted</th>
+                                                <th>Ward</th>
+                                                <th>Bed Number</th>
+                                                <th>Expected Stay (Days)</th>
+                                                <th>Planned Exit Date</th>
+                                                <th>Actual Exit Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0002</td>
+                                                <td>Juana Dela Cruz</td>
+                                                <td>2025-05-05</td>
+                                                <td><span id="ward-0002">General Ward</span></td>
+                                                <td>
+                                                    <select name="bed" id="bed-0002">
+                                                        <option value="">Select Bed</option>
+                                                        <option value="1">1</option>
                                                     </select>
                                                 </td>
-
-                                                <!-- Expected  Stay (Days) -->
-                                                <td>143</td>
-
-                                                <!-- Planned Exit Date -->
-                                                <td>12/10/2002</td>
-
-                                                <!-- Exit Date -->
-                                                <td><input type="date" name="exit-date" id="exit-date"></td>
-
-                                                <!-- Bed -->
-                                                <td><select name="bed" id="bed">
-                                                        <option value="">Choose Bed</option>
-                                                        <option value="Bed ni Aldrin">Bed ni Aldrin</option>
-                                                    </select>
+                                                <td>5</td>
+                                                <td>2025-05-10</td>
+                                                <td><input type="date" name="exit-date" id="exit-date-0002"></td>
+                                                <td>
+                                                    <button type="button" class="update-inpatient-btn" data-patient-id="0002">Update</button>
                                                 </td>
-
-                                                <!-- Update -->
-                                                <td><a href="#">Update</a></td>
-
-                                                <!-- Delete -->
-                                                <td><a href="#">Delete</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </details>
                 </div>
             </section>
         </div>
     </div>
-    <!-- JS Script -->
-    <!-- <script src="../js/script.js"></script> -->
 </body>
 
 </html>
